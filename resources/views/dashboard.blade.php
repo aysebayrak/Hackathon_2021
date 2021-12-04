@@ -70,6 +70,43 @@
                                 </tr>
                             @endforeach
                         @endcan
+                        @can('isCustomer')
+                            @foreach(\App\Models\Order::where('customer_id',\Illuminate\Support\Facades\Auth::user()->id)->get() as $order)
+                                <tr class="text-gray-700 dark:text-gray-400">
+                                    <td class="px-4 py-3">
+                                        <div class="flex items-center text-sm">
+                                            <!-- Avatar with inset shadow -->
+                                            <div class="relative hidden w-20 h-20 mr-3 rounded-full md:block">
+                                                <img class="object-cover w-full h-full rounded-full" src="{{$order->farmer->profile_photo_url}}{{--$order->customer->profile_photo_url ? '/storage/'.$order->customer->profile_photo_url :
+                                'https://ui-avatars.com/api/?name='.urlencode($order->customer->name).'&color=7F9CF5&background=EBF4FF'--}}" alt="" loading="lazy" />
+                                                <div class="absolute inset-0 rounded-full shadow-inner" aria-hidden="true"></div>
+                                            </div>
+                                            <div>
+                                                <p class="font-semibold">{{$order->farmer->name}}</p>
+                                                <p class="text-xs text-gray-600 dark:text-gray-400">
+                                                    {{$order->farmer->phone}}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="px-4 py-3 text-xs">
+                                        {{$order->product->name}}
+                                    </td>
+                                    <td class="px-4 py-3 text-xs">
+                                        {{$order->product->quantity}}
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">
+                                        ₺{{$order->product->price}}
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">
+                                        {{\Carbon\Carbon::make($order->product->delivery_date)->format('d-m-Y')}}
+                                    </td>
+                                    <td class="px-4 py-3 text-sm">
+                                        {{--                                        <x-secondary-button>Satın Al</x-secondary-button>--}}
+                                    </td>
+                                </tr>
+                            @endforeach
+                        @endcan
                         </tbody>
                     </table>
                 </div>
