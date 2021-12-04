@@ -1,40 +1,13 @@
-# Larawind - Laravel 8.0+ Jetstream and Tailwind CSS Admin Theme
-
-This project is created with [Laravel Jetstream](https://jetstream.laravel.com/1.x/introduction.html) Framework and [Tailwind CSS](https://tailwindcss.com), the admin environment is desing by [Windmill Dashboard](https://windmill-dashboard.vercel.app/).
-
-## Requirements
-
-- Laravel installer
-- Composer
-- Npm installer
-
-## Installation
-
-```
-# Clone the repository from GitHub and open the directory:
-git clone https://github.com/miten5/larawind.git
-
-# cd into your project directory
-cd larawind
-
-#install composer and npm packages
-composer install
-npm install && npm run dev
-
-# Start prepare the environment:
-cp .env.example .env // setup database credentials
-php artisan key:generate
-php artisan migrate
-php artisan storage:link
-
-# Run your server
-php artisan serve
-
-```
-If you like my work [Buy me a coffee](https://www.buymeacoffee.com/miten5)
-
-### Project made possible thanks to:
-
-- [Laravel Jetstream](https://jetstream.laravel.com/1.x/introduction.html)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Windmill Dashboard](https://windmill-dashboard.vercel.app/)
+# 1) HAAL
+    Alıcıların Üreticilere doğrudan ulaşmasını sağlayan bir platform. Üreticiler ürün ekimine başlamadan 
+    bir alıcı bulurlar. Alıcı ve Üretici arasında sözleşme imzalanır ve üreticiler korunmuş bir şekilde üretime başlanır.
+## 2) KULLANIM
+### 2.1) Alıcı İçin Kullanım Talimatları
+Alıcı sisteme kayıt olduktan sonra istediği ürüne göre filtreleme yapar. Sistemde mevcut olan üreticilere teklif verir eğer üretici teklifi onaylarsa depoziyoyu ödeyerek üretim sürecini başlatır.
+### 2.2) Üretici İçin Kullanım Talimatları
+Üretici sisteme kayıt olduktan sonra ürün ekleme menüsünden ilgili verileri girerek ürün ekler. Ürüne bir alıcı tarafından talep gelirse Üretici bu talebi onaylar veya reddeder.
+## 3) Katkıda Bulunanlar
+[Ayşe Bayrak](https://github.com/aysebayrak812),
+[Ahmet Ceyran](https://github.com/ahmetceyran),
+[Emircan Çetin](https://github.com/ctnemir),
+[Ferhat Eroğlu](https://github.com/ferhateroglu)
