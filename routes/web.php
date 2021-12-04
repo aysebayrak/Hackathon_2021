@@ -53,4 +53,4 @@ Route::group(['middleware' => ['auth:sanctum', 'verified']], function () {
         ->middleware('can:admin');
 });
 
-Route::view('/shop','shop',["products"=>\App\Models\Product::where("sold_at",null)->get()])->name('shop');
+Route::view('/shop','shop',["products"=>\App\Models\Product::where("sold_at","=",null)->get()])->name('shop');

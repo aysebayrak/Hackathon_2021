@@ -28,7 +28,6 @@
                             {{ session('status') }}
                         </div>
                         @endif
-
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <label class="block text-sm">
@@ -57,6 +56,31 @@
                                 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple
                                 dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="address_district" :value="old('address_district')" required />
                             </label>
+                            <label class="block mt-4 text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">Açık Adres</span>
+                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700
+                                focus:border-purple-400 focus:outline-none focus:shadow-outline-purple
+                                dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="address_district" :value="old('address_district')" required />
+                            </label>
+                            <div class="mt-4 text-sm">
+                <span class="text-gray-700 dark:text-gray-400">
+                    Kullanıcı Tipi
+                </span>
+                                <div class="mt-2">
+                                    <label class="inline-flex items-center text-gray-600 dark:text-gray-400">
+                                        <input type="radio" class="text-purple-600 form-radio focus:border-purple-400
+                                        focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                                               name="user_type" value="farmer" />
+                                        <span class="ml-2">Çiftçi</span>
+                                    </label>
+                                    <label class="inline-flex items-center ml-6 text-gray-600 dark:text-gray-400">
+                                        <input type="radio" class="text-purple-600 form-radio focus:border-purple-400
+                                        focus:outline-none focus:shadow-outline-purple dark:focus:shadow-outline-gray"
+                                               name="user_type" value="customer" />
+                                        <span class="ml-2">Müşteri</span>
+                                    </label>
+                                </div>
+                            </div>
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">Şifre</span>
                                 <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="***************" type="password" name="password" required autocomplete="new-password" />

@@ -45,9 +45,10 @@
                             {{\Carbon\Carbon::make($product->delivery_date)->format("d-m-Y")}}
                         </td>
                         <td class="px-4 py-3 text-sm">
-                            <a href="orders/create/{{$product->id}}">
+                            {{--<a href="orders/create/{{$product->id}}">
                                 <x-secondary-button>Satın Al</x-secondary-button>
-                            </a>
+                            </a>--}}
+                            {{$product->sold_at == null ? "Satışta" : "Satıldı"}}
                         </td>
                     </tr>
                 @endforeach
