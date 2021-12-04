@@ -6,6 +6,9 @@ module.exports = {
     purge: ['./storage/framework/views/*.php', './resources/views/**/*.blade.php'],
 
     theme: {
+        height: {
+          "md" : "28rem",
+        },
         themeVariants: ['dark'],
         customForms: (theme) => ({
             default: {

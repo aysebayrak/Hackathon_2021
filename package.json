@@ -22,7 +22,9 @@
         "vue-template-compiler": "^2.6.12"
     },
     "dependencies": {
+        "@fortawesome/fontawesome-free": "^5.15.4",
         "alpinejs": "^2.8.1",
+        "jquery": "^3.6.0",
         "turbolinks": "^5.2.0"
     }
 }

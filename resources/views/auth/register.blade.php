@@ -32,20 +32,38 @@
                         <form method="POST" action="{{ route('register') }}">
                             @csrf
                             <label class="block text-sm">
-                                <span class="text-gray-700 dark:text-gray-400">Name</span>
-                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Jane Doe" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+                                <span class="text-gray-700 dark:text-gray-400">Ad Soyad</span>
+                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
                             </label>
                             <label class="block mt-4 text-sm">
-                                <span class="text-gray-700 dark:text-gray-400">Email</span>
-                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="Jane Doe" type="email" name="email" :value="old('email')" required />
+                                <span class="text-gray-700 dark:text-gray-400">E-posta</span>
+                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input"  type="email" name="email" :value="old('email')" required />
                             </label>
                             <label class="block mt-4 text-sm">
-                                <span class="text-gray-700 dark:text-gray-400">Password</span>
+                                <span class="text-gray-700 dark:text-gray-400">Telefon No</span>
+                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700
+                                focus:border-purple-400 focus:outline-none focus:shadow-outline-purple
+                                dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="tel" name="phone" :value="old('phone')" required />
+                            </label>
+                            <label class="block mt-4 text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">Şehir</span>
+                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700
+                                focus:border-purple-400 focus:outline-none focus:shadow-outline-purple
+                                dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="address_city" :value="old('address_city')" required />
+                            </label>
+                            <label class="block mt-4 text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">İlçe</span>
+                                <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700
+                                focus:border-purple-400 focus:outline-none focus:shadow-outline-purple
+                                dark:text-gray-300 dark:focus:shadow-outline-gray form-input" type="text" name="address_district" :value="old('address_district')" required />
+                            </label>
+                            <label class="block mt-4 text-sm">
+                                <span class="text-gray-700 dark:text-gray-400">Şifre</span>
                                 <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="***************" type="password" name="password" required autocomplete="new-password" />
                             </label>
                             <label class="block mt-4 text-sm">
                                 <span class="text-gray-700 dark:text-gray-400">
-                                    Confirm password
+                                    Şifrenizi Onaylayın
                                 </span>
                                 <input class="block w-full mt-1 text-sm dark:border-gray-600 dark:bg-gray-700 focus:border-purple-400 focus:outline-none focus:shadow-outline-purple dark:text-gray-300 dark:focus:shadow-outline-gray form-input" placeholder="***************" type="password" name="password_confirmation" required autocomplete="new-password" />
                             </label>
@@ -58,7 +76,7 @@
 
                         <p class="mt-4">
                             <a class="text-sm font-medium text-purple-600 dark:text-purple-400 hover:underline" href="{{ route('login') }}">
-                                Already have an account? Login
+                                Zaten Üye misiniz? Giriş Yapıın
                             </a>
                         </p>
                     </div>

@@ -15,7 +15,7 @@ class User extends Authenticatable
     use HasApiTokens;
     use HasFactory;
     use HasProfilePhoto;
-    use HasTeams;
+//    use HasTeams;
     use Notifiable;
     use TwoFactorAuthenticatable;
 
@@ -57,4 +57,11 @@ class User extends Authenticatable
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function farmer(){
+        return $this->hasOne(Farmer::class);
+    }
+    public function address(){
+        return $this->belongsTo(Address::class);
+    }
 }
